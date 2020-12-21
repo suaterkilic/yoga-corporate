@@ -1,0 +1,402 @@
+/*Global Styles*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto';
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 5rem 0;
+}
+
+/*Header*/
+
+header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.nav-brand{
+    width: 5rem
+}
+
+.menu-icons i {
+    font-size: 3.5rem;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.nav-list .active{
+    right: 0 !important;
+}
+
+.close i{
+    color: #ec0e50;
+}
+
+.nav-list{
+    width: 25rem;
+    height: 100vh;
+    background-color: #0d0315;
+    position: fixed;
+    top: 0;
+    right: -265px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: all 650ms ease-in-out;
+}
+
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.nav-item{
+    margin: 1.5rem 0;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+/*Hero*/
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgb(60 16 83) 0% ,rgb(0 0 0 / 80%) 100%), url('/hero-bg.jpg') center no-repeat;
+    position: relative;
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.7rem;
+}
+.main-message{
+    width: 100%;
+    max-width: 50rem;
+    text-transform: uppercase;
+    color: #fafafa;
+    transform: translateY(20%);
+}
+.main-message h3{
+    font-size: 1.6rem;
+}
+.main-message h1{
+    font-family: 'Roboto';
+    font-size: 4rem;
+    margin: 3rem 0;
+    letter-spacing: 4px;
+}
+.main-message p{
+    text-transform: capitalize;
+}
+
+.btn{
+    background-color: #ec0e50;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+    font-size: 1.5rem;
+}
+
+.btn-hover{
+    background-color: #ce587b;
+}
+
+/*
+    Experience the outdoors
+*/
+
+.experience-outdoors{
+    padding: 0;
+}
+
+.title-heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    color: rgba(0, 0, 0,.7);
+}
+
+.title-heading h3{
+    font-size: 1.4rem;
+}
+
+.title-heading h1{
+    font-family: 'Roboto';
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+}
+
+.title-heading p{
+    text-transform: lowercase;
+}
+
+.activities-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.activities-grid-item{
+    height: 40rem;
+    padding: 5rem;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.activities-grid-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* Chrome 10-25, Safari 5.1-6 */
+    z-index: -1;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgb(60 16 83) 0% ,rgb(0 0 0 / 80%) 100%), url('/hero-bg.jpg') center no-repeat;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.activities-grid-item i{
+    font-size: 4rem;
+    color: #ec0e50;
+}
+
+.activities-grid-item h1{
+    font-family: 'Roboto';
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    color: #fff;
+}
+
+.activities-grid-item p {
+    color: #fff;
+}
+/*
+    Testimonials
+*/
+.testimonials{
+    width: 100%;
+    height: 58vh;
+    position: relative;
+    background-size: cover;
+    background: linear-gradient(135deg, rgb(60 16 83) 0% ,rgb(0 0 0 / 80%) 100%), url('/hero-bg.jpg') center no-repeat;
+
+}
+
+.testimonials::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.7rem;
+    background-size: cover;
+}
+
+.testimonial{
+    width: 100%;
+    color: #fafafa;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.testimonial-text-box{
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.testimonial-text-box i{
+    position: absolute;
+    top: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: #ec0e50;
+    opacity: 0.5;
+    z-index: -1;
+}
+.testimonial-customer img{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100%;
+    border: 3px solid #ec0e50;
+}
+
+/*
+    Adventures
+*/
+
+.adventure-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.adventure-grid-item p {
+    color:rgba(0, 0, 0,.7)
+}
+
+footer{
+    padding: 2.5rem;
+    background-color: #d7d4ed;
+    text-align: center;
+    color: rgba(0,0,0,.7)
+}
+
+/*
+    Media Queries
+*/
+
+@media screen and (min-width: 350px) {
+    .main-message {
+        transform: translateY(40%);
+    }
+}
+
+@media screen and (min-width: 470px) {
+    .hero::before {
+        height: 9.4rem;
+    }
+    .testimonial::before{
+        height: 9.4rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    header{
+        height: 8rem;
+    }
+    .nav-brand{
+        width: 6.5rem;
+    }
+
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        display: flex;
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .menu-icons {
+        display: none;
+    }
+
+    .nav-item{
+        margin: 0 2.5rem
+    }
+
+    .nav-link,
+    .current{
+        color: #fafafa;
+        position: relative;
+        font-size: 1.3rem;
+    }
+
+    .nav-link::before,
+    .current::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background-color: #ec0e50;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+
+    .current::before{
+        transform: scaleX(1);
+    }
+
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+
+    .hero{
+        height: 80vh;
+    }
+
+    .main-message{
+        transform: translateY(70%);
+    }
+
+    .title-heading h1{
+        font-size: 2.5rem;
+    }
+}
